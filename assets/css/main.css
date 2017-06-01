@@ -1,0 +1,213 @@
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding: 0px !important;
+}
+.sticky{
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+.navbar{
+  background-color: rbg(0, 0, 0, 0) padding: 15px;
+  height: 70px;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar-list li {
+  white-space: nowrap;
+  text-align: center;
+  padding: 15px;
+  flex: 1;
+}
+
+#home {
+  background: url(https://raw.githubusercontent.com/kdalrymple4/kdalrymple4.github.io/master/background%20-image.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh !important;
+}
+.section{
+  padding-top:70px;
+  height:50vh;
+}
+
+.navbar-list-item {
+  color: black;
+  vertical-align: middle;
+}
+
+
+/*LINK STYLING*/
+
+
+.navbar a:hover {
+  text-decoration: none;
+}
+
+.navbar .fa {
+  font-size: 20px;
+}
+
+.navbar-item-label {
+  display: none;
+}
+
+.navbar a:hover {
+  color: #CADCEB;
+}
+
+.navbar li:hover a {
+  text-decoration: none;
+  color: #6AA5B9;
+}
+
+.navbar .active a {
+  color: #40433F !important;
+}
+
+.navbar a:visited {
+  text-decoration: none;
+  color: #6AA5B9;
+}
+
+
+/*LINK SPECIFIC STYLING*/
+
+.navbar-home:hover .navbar-item-label {
+  display: inline;
+}
+
+.navbar-home:hover .fa {
+  display: none;
+}
+
+.navbar-about-me:hover .navbar-item-label {
+  display: inline;
+}
+
+.navbar-about-me:hover .fa {
+  display: none;
+}
+
+.navbar-skills:hover .navbar-item-label {
+  display: inline;
+}
+
+.navbar-skills:hover .fa {
+  display: none;
+}
+
+.navbar-projects:hover .navbar-item-label {
+  display: inline;
+}
+
+.navbar-projects:hover .fa {
+  display: none;
+}
+
+.navbar-contact-me:hover .navbar-item-label {
+  display: inline;
+}
+
+.navbar-contact-me:hover .fa {
+  display: none;
+}
+
+
+/*MOBILE NAVBAR STYLING*/
+
+#menuToggle {
+  float: right;
+  display: block;
+  position: relative;
+  top: 15px;
+  right: -10px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #CADCEB;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #CADCEB;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: relative;
+  width: 170px;
+  margin: -100px 0 0 -100px;
+  padding-top: 115px;
+  padding-left: 0px;
+  background: rgb(0,0,0,0);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  transition: transform 1s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+#menu li{
+  padding:10px;
+}
+
+#menuToggle input:checked~ul {
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
