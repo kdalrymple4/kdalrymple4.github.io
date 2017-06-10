@@ -1,13 +1,15 @@
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   padding: 0px !important;
 }
-.sticky{
+
+.sticky {
   top: 0;
   z-index: 100;
   position: fixed;
   width: 100%;
 }
-.navbar{
+
+.navbar {
   background-color: rbg(0, 0, 0, 0) padding: 15px;
   height: 70px;
 }
@@ -30,29 +32,42 @@
 }
 
 #home {
-  background: url(assets/img/background-image.jpg) no-repeat center center;
+  background: url(../img/background-image.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height:100vh !important;
-}
-.section{
-  padding-top:70px;
-  height:50vh;
 }
 
-.navbar-list-item {
-  color: black;
-  vertical-align: middle;
+.section {
+  border-color: black;
+  border-style: dashed;
+  height: 100vh;
+  box-sizing: content-box;
+}
+.page-content{
+  margin-top:70px;
 }
 
 
-/*LINK STYLING*/
-
-
+/*NAVBAR GENERAL*/
+.navbar a{
+  text-decoration: none !important;
+}
 .navbar a:hover {
-  text-decoration: none;
+  color: #CADCEB;
+}
+
+.navbar a:visited {
+  color: #6AA5B9;
+}
+
+.navbar .active a {
+  color: #40433F !important;
+}
+
+.navbar li:hover a {
+  color: #6AA5B9;
 }
 
 .navbar .fa {
@@ -63,64 +78,14 @@
   display: none;
 }
 
-.navbar a:hover {
-  color: #CADCEB;
-}
 
-.navbar li:hover a {
-  text-decoration: none;
-  color: #6AA5B9;
-}
+/*DESKTOP NAV STYLING*/
 
-.navbar .active a {
-  color: #40433F !important;
-}
-
-.navbar a:visited {
-  text-decoration: none;
-  color: #6AA5B9;
-}
-
-
-/*LINK SPECIFIC STYLING*/
-
-.navbar-home:hover .navbar-item-label {
+.hidden-sm-down li:hover .navbar-item-label {
   display: inline;
 }
 
-.navbar-home:hover .fa {
-  display: none;
-}
-
-.navbar-about-me:hover .navbar-item-label {
-  display: inline;
-}
-
-.navbar-about-me:hover .fa {
-  display: none;
-}
-
-.navbar-skills:hover .navbar-item-label {
-  display: inline;
-}
-
-.navbar-skills:hover .fa {
-  display: none;
-}
-
-.navbar-projects:hover .navbar-item-label {
-  display: inline;
-}
-
-.navbar-projects:hover .fa {
-  display: none;
-}
-
-.navbar-contact-me:hover .navbar-item-label {
-  display: inline;
-}
-
-.navbar-contact-me:hover .fa {
+.hidden-sm-down li:hover .fa {
   display: none;
 }
 
@@ -128,11 +93,13 @@
 /*MOBILE NAVBAR STYLING*/
 
 #menuToggle {
+  height: 40px;
+  width: 50px;
   float: right;
   display: block;
   position: relative;
-  top: 15px;
-  right: -10px;
+  top: 16px;
+  right: 0px;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
@@ -190,24 +157,35 @@
 
 #menu {
   position: relative;
-  width: 170px;
-  margin: -100px 0 0 -100px;
+  width: 125px;
+  margin: -100px 0 0 -50px;
   padding-top: 115px;
   padding-left: 0px;
-  background: rgb(0,0,0,0);
+  padding-right: 15px;
+  background: rgb(0, 0, 0, 0);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
-  transform: translate(0, -100%);
-  transition: transform 1s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-}
-#menu li{
-  padding:10px;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
 #menuToggle input:checked~ul {
   transform: scale(1.0, 1.0);
   opacity: 1;
+}
+
+.navbar .hidden-md-up a {
+  margin: 5px;
+  width: 125px;
+  float: right;
+}
+
+.navbar .hidden-md-up i {
+  width: 20px;
+  height: auto;
+  margin-right: 12px !important;
+  float: left;
 }
